@@ -4,8 +4,9 @@
     --black: #333333;
     --black-placeholder: #3d3d3d;
     --bleu-fonc: #0066ff;
-    --bleu-icon: #0053cf;
     --bleu-clair: #DEEBFF;
+    --icon-actif: #0066ff;
+    --icon-inactif: #d9d9d9;
     --gris: #f2f2f2;
     --white: #fafafa;
     --raleway: 'Raleway',
@@ -22,12 +23,32 @@
 body {
     font-family: var(--raleway);
     color: var(--black);
-    /*margin: 0;*/
+    margin: 0;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+p {
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+h3 {
+    margin: 0.25rem 0.75rem 0 0.75rem;
+}
+
+.icons-gp {
+    margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+i[data-active=true] {
+    color: var(--icon-actif);
+}
+
+i[data-active=false] {
+    color: var(--icon-inactif);
 }
 
 header {
@@ -302,35 +323,32 @@ main {
     }
 }
 
-.hostingWrapper,
-.hostingPopular,
-.hostingMain {
+
+.hosting, .hosting-popular {
     background-color: #F2F2F2;
     border-radius: 1.5rem;
     padding: 2rem;
 }
 
-.hosting {
+#hosting {
     display: grid;
     column-gap: 2rem;
     grid-template-columns: 6fr 3fr;
 }
 
-.hostingMain {
+.hosting {
     display: grid;
     column-gap: 2rem;
     row-gap: 2rem;
 }
 
-.hostingMainHeader {
+.hosting > h2 {
     grid-column: 1/-1;
-}
-
-.hostingMainHeaderTitle {
     margin: 0;
 }
 
-.hostingMainCard {
+
+.card-hosting {
     background-color: white;
     padding: 0.375rem;
     border-radius: 1.25rem;
@@ -341,15 +359,15 @@ main {
     height: 100%;
 }
 
-.hostingMainCard:hover {
+.card-hosting:hover {
     transform: scale(1.02);
 }
 
-.hostingMainCardFigure {
+.card-hosting > Figure {
     margin: 0;
 }
 
-.hostingMainCardFigureImg {
+.card-hosting figure > img {
     height: 7rem;
     object-fit: cover;
     max-width: 100%;
@@ -358,55 +376,35 @@ main {
     border-radius: 1rem 1rem 0 0;
 }
 
-.hostingMainCardFigureCaptionTitle {
-    margin: 0.25rem 0.75rem 0 0.75rem;
-}
 
-.hostingMainCardDesc {
-    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
-}
-
-.hostingMainCardDescPrice {
+.hosting > a {
     font-weight: bold;
 }
 
-.hostingMainCardGrade {
-    margin: 0 0.75rem 0.25rem 0.75rem;
-}
 
-.hostingMainCardGradeIcon[data-active=true] {
-    color: #0065FC;
-}
+/** Aside **/
 
-.hostingMainCardGradeIcon[data-active=false] {
-    color: #d9d9d9;
-}
-
-.hostingMainViewmore {
-    font-weight: bold;
-}
-
-.hostingPopular {
+.hosting-popular {
     display: grid;
     row-gap: 2rem;
     align-items: start;
     grid-template-rows: auto repeat(3, 1fr);
 }
 
-.hostingPopularTitle {
+.hosting-popular > h2 {
     margin: 0;
     display: flex;
     justify-content: space-between;
 }
 
-.hostingPopularWrapcontent {
+.hosting-popular a {
     display: flex;
     align-items: stretch;
     height: 100%;
     overflow: auto;
 }
 
-.hostingPopularWrapcontentWrapimg {
+.hosting-popular-img {
     position: relative;
     min-height: 100%;
     width: 33%;
@@ -414,7 +412,7 @@ main {
     max-width: 33%;
 }
 
-.hostingPopularWrapcontentWrapimgImg {
+.hosting-popular-img img {
     border-radius: 1rem 0 0 1rem;
     position: absolute;
     width: 100%;
@@ -422,73 +420,73 @@ main {
     object-fit: cover;
 }
 
-.hostingPopularWrapcontentContent {
+.hosting-popular-content {
     display: flex;
     flex-direction: column;
 }
 
-.hostingPopularWrapcontentContentWhitespace {
+.hosting-popular-content-flex {
     flex: 1;
-}
+} 
 
-.hostingPopularhostingMainCard {
-    height: 8.75rem;
-}
 
 @media (max-width: 1440px) {
-    .hosting {
+    #hosting {
         grid-template-columns: 1fr;
         row-gap: 2rem;
     }
 
-    .hostingPopular {
+    .hosting-popular {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto 10rem;
         column-gap: 2rem;
         grid-row-start: 1;
     }
 
-    .hostingPopularTitle {
+    .hosting-popular > h2 {
         grid-column: 1/-1;
     }
 }
 
 @media (min-width: 925px) {
-    .hostingMain {
+    .hosting {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 925px) and (min-width: 650px) {
-    .hostingMain {
+    .hosting {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 650px) {
-    .hostingMain {
+    .hosting {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 1000px) {
-    .hostingPopular {
+    .hosting-popular {
         grid-template-columns: 1fr;
         grid-template-rows: auto repeat(3, 9rem);
     }
 }
 
-.activity {
+
+/** Section activity **/
+
+#activity {
     display: grid;
     column-gap: 2rem;
     margin: 4rem 0;
 }
 
-.activityTitle {
+#activity > h2 {
     grid-column: 1/-1;
 }
 
-.activityCard {
+.card-activity {
     box-shadow: 0 0 20px #0000002e;
     border-radius: 1rem;
     overflow: hidden;
@@ -497,65 +495,69 @@ main {
     transition-duration: 0.1s;
 }
 
-.activityCard:hover {
+.card-activity:hover {
     transform: scale(1.01);
 }
 
-.activityCardWrapimg {
+.card-activity-img {
     position: relative;
     flex: 1;
 }
 
-.activityCardWrapimgImg {
+.card-activity-img > img {
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.activityCardTitle {
+.card-activity > h3 {
     margin: 1.2rem 1.5rem;
 }
 
 @media (min-width: 1100px) {
-    .activity {
+    #activity {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
     }
 
-    .activityCard1 {
+    #activity > h2 {
+        margin-bottom: 2rem;
+    }
+
+    .card_1 {
         grid-row: 2/7;
         grid-column: 1/2;
     }
 
-    .activityCard2 {
+    .card_2 {
         grid-column: 2/3;
         grid-row: 2/5;
     }
 
-    .activityCard3 {
+    .card_3 {
         grid-column: 3/4;
         grid-row: 2/7;
     }
 
-    .activityCard4 {
+    .card_4 {
         grid-column: 4/5;
         grid-row: 2/3;
     }
 
-    .activityCard5 {
+    .card_5 {
         grid-column: 2/3;
         grid-row: 6/7;
     }
 
-    .activityCard6 {
+    .card_6 {
         grid-column: 4/5;
         grid-row: 4/7;
     }
 }
 
 @media (max-width: 1100px) {
-    .activity {
+    #activity {
         row-gap: 2rem;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto 12rem 12rem;
@@ -563,7 +565,7 @@ main {
 }
 
 @media (max-width: 925px) {
-    .activity {
+    #activity {
         row-gap: 2rem;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto 12rem 12rem 12rem;
@@ -571,7 +573,7 @@ main {
 }
 
 @media (max-width: 650px) {
-    .activity {
+    #activity {
         row-gap: 2rem;
         grid-template-columns: 1fr;
         grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
