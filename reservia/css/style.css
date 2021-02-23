@@ -20,7 +20,7 @@
     --transform: scale(1.02);
 }
 
-/** Reset DOM**/
+/** Reset **/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,7 +31,6 @@
 body {
     font-family: var(--raleway);
     color: var(--black);
-    /* margin: 0; */
 }
 
 a {
@@ -158,9 +157,7 @@ main {
     max-width: 1440px;
     margin: auto;
     padding: 0 2rem;
-    /* box-sizing: border-box; */
 }
-
 
 /** Section search **/
 .search h1 {
@@ -195,7 +192,6 @@ main {
     border-left: none;
     border-top: var(--gris) 1px solid;
     border-bottom: var(--gris) 1px solid;
-    /*box-sizing: border-box;*/
     font-size: 1rem;
     font-weight: bold;
 }
@@ -378,7 +374,6 @@ main {
     background-color: var(--white);
     transition: 1.7s;
     cursor: pointer;
-    /* box-sizing: border-box; */
 }
 
 .card-hosting:hover {
@@ -611,7 +606,6 @@ main {
     max-width: 100%;
     margin: auto;
     padding: 0 2rem;
-    /* box-sizing: border-box; */
 }
 
 .footer-column {
