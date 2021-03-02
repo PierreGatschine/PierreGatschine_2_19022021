@@ -6,9 +6,9 @@
     --black: #333333;
     --black-placeholder: #3d3d3d;
     --box-shadow: #00000040;
-    --bleu-fonc: #0066ff;
+    --bleu-fonc: #0065fc;
     --bleu-clair: #DEEBFF;
-    --icon-actif: #0066ff;
+    --icon-actif: #0065fc;
     --icon-inactif: #d9d9d9;
     --gris: #f2f2f2;
     --white: #fafafa;
@@ -20,7 +20,7 @@
     --transform: scale(1.02);
 }
 
-/** Reset **/
+/** Reset CSS **/
 * {
     box-sizing: border-box;
     margin: 0;
