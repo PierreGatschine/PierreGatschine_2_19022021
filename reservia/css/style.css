@@ -17,7 +17,7 @@
         sans-serif;
 
     --transition: 1.7s;
-    --transform: scale(1.02);
+    --transform: scale(1.07);
 }
 
 /** Reset CSS **/
@@ -251,6 +251,7 @@ main {
 }
 
 .tag-filter:hover {
+    border: var(--bleu-clair);
     background-color: var(--bleu-clair);
     transition: var(--transition);
     transform: var(--transform);
